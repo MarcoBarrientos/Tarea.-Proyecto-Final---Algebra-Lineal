@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
+    <title>Proyecto Algebra Líneal</title>
+</head>
+
+<body>
+  
+    <div class="option">
+        <h2>Encontrar Matriz Inversa</h2>
+        <label for="inversa-size">Tamaño de la Matriz:</label>
+        <select id="inversa-size">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+        </select>
+        <div class="matrix-input" id="inversaInput">
+            <!-- Campos de entrada para la matriz inversa -->
+        </div>
+        <button onclick="calcularInversa()">Calcular Inversa</button>
+        <button onclick="limpiarInversa()">Limpiar</button>
+        <div id="inversa-result"></div>
+    </div>
+
+    <div class="option">
+        <h2>Multiplicación de Matrices</h2>
+        <label for="multiply-size">Tamaño de las Matrices:</label>
+        <select id="multiply-size">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+        </select>
+        <div class="matrix-input" id="multiplyInput1">
+
+        </div>
+        <div class="matrix-input" id="multiplyInput2">
+
+        </div>
+        <button onclick="multiplicarMatrices()">Multiplicar Matrices</button>
+        <button onclick="limpiarMultiplicacion()">Limpiar</button>
+        <div id="multiply-result"></div>
+    </div>
+
+    <div class="option">
+        <h2>Resolver Sistema de Ecuaciones</h2>
+        <label for="sistema-size">Tamaño de la Matriz:</label>
+        <select id="sistema-size">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+        </select>
+        <label for="method">Método de Resolución:</label>
+    <input type="radio" name="method" value="gauss-jordan" id="gauss-jordan"> Gauss-Jordan
+    <input type="radio" name="method" value="cramer" id="cramer"> Regla de Cramer (No funciona D:)
+    <div class="matrix-input" id="sistemaInput">
+
+        <input type="number" id="sistemaInput-0-0" placeholder="a">
+        <input type="number" id="sistemaInput-0-1" placeholder="b">
+        <input type="number" id="sistemaInput-1-0" placeholder="c">
+        <input type="number" id="sistemaInput-1-1" placeholder="d">
+        <label for="sistema-ex">Det(Ax):</label>
+        <input type="number" id="sistema-ex" placeholder="Det(Ax)">
+        <label for="sistema-ey">Det(Ay):</label>
+        <input type="number" id="sistema-ey" placeholder="Det(Ay)">
+    </div>
+    
+    <button onclick="resolverSistema()">Resolver Sistema</button>
+    <button onclick="limpiarSistema()">Limpiar</button>
+    <div id="sistema-result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
